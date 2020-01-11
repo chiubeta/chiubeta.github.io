@@ -1,5 +1,5 @@
 body {
-	font-family: 'Dosis', sans-serif;
+	font-family: '微軟正黑體', sans-serif;
     color: #404142;
     font-size: 16px;
 	letter-spacing: 0.8px;
@@ -19,6 +19,9 @@ a {
 }
 a:hover, a:focus, a:active, a:visited {
     text-decoration: none;
+}
+h1, h2, h3{
+    font-weight: bold;
 }
 
 /* Buttons override */
