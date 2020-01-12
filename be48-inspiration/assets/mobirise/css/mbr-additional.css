@@ -724,6 +724,10 @@ section.lazy-placeholder:after {
 .cid-rNnjzzSlZ8 .mbr-section-subtitle {
   font-style: italic;
 }
+.cid-rNnjzzSlZ8 .mbr-text,
+.cid-rNnjzzSlZ8 .mbr-section-btn {
+  color: #232323;
+}
 .cid-rNnmW4ILpz {
   padding-top: 45px;
   padding-bottom: 30px;
