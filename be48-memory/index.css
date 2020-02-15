@@ -1,0 +1,17 @@
+.greenBlue {
+	background: linear-gradient(90deg, rgba(1,204,0,1) 0%, rgba(0,133,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blueGreen {
+	background: linear-gradient(90deg, rgba(0,133,255,1) 0%, rgba(1,204,0,1) 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.redYellow {
+	background: linear-gradient(90deg, rgba(245,63,44,1) 0%, rgba(237,235,48,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
