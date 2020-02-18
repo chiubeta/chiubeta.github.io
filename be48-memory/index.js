@@ -1,9 +1,9 @@
-$(".playMusic").on("click", function(e) {
-	e.preventDefault();
-	const music = document.querySelector("#audio3");
-	music.currentTime = 0;
-	music.play();
-});
+// $(".playMusic").on("click", function(e) {
+// 	e.preventDefault();
+// 	const music = document.querySelector("#audio3");
+// 	music.currentTime = 0;
+// 	music.play();
+// });
 
 // const isMusicOn = [];
 // const musicStartSec = [0,0,71];
