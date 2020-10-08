@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jubo VitalLink API</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        .api-list-container {
+            width: 50%;
+        }
+
+        .opblock.opblock-post {
+            border-color: #49cc90;
+            background: rgba(73,204,144,.1);
+        }
+
+        .opblock.opblock-get {
+            border-color: #61affe;
+            background: rgba(97,175,254,.1);
+        }
+        
+        .opblock.opblock-put {
+            border-color: #fca130;
+            background: rgba(252,161,48,.1);
+        }
+
+        .opblock {
+            margin: 0 0 15px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            box-shadow: 0 0 3px rgba(0,0,0,.19);
+        }
+
+        .opblock.opblock-post .opblock-summary {
+            border-color: #49cc90;
+        }
+        
+        .opblock.opblock-get .opblock-summary {
+            border-color: #61affe;
+        }
+        
+        .opblock.opblock-put .opblock-summary {
+            border-color: #fca130;
+        }
+
+        .opblock .opblock-summary {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .opblock.opblock-post .opblock-summary-method {
+            background: #49cc90;
+        }
+
+        .opblock.opblock-get .opblock-summary-method {
+            background: #61affe;
+        }
+
+        .opblock.opblock-put .opblock-summary-method {
+            background: #fca130;
+        }
+
+        .opblock .opblock-summary-method {
+            font-size: 14px;
+            font-weight: 700;
+            min-width: 80px;
+            padding: 6px 15px;
+            text-align: center;
+            border-radius: 3px;
+            background: #000;
+            text-shadow: 0 1px 0 rgba(0,0,0,.1);
+            font-family: sans-serif;
+            color: #fff;
+        }
+
+        .opblock .opblock-summary-path {
+            flex-shrink: 0;
+        }
+
+        .opblock .opblock-summary-operation-id, .opblock .opblock-summary-path, .opblock .opblock-summary-path__deprecated {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            word-break: break-word;
+            padding: 0 10px;
+            font-family: monospace;
+            font-weight: 600;
+            color: #3b4151;
+        }
+    </style>
+    <body>
+        <div class="api-list-container">
+            <div class="opblock opblock-get">
+                <div class="opblock-summary opblock-summary-get">
+                    <span class="opblock-summary-method">GET</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/vitalsign</span>
+                        </a>
+                    </span>
+                    <div class="opblock-summary-description">Read vitalsign list</div>
+                </div>
+            </div>
+            <div class="opblock opblock-post">
+                <div class="opblock-summary opblock-summary-post">
+                    <span class="opblock-summary-method">POST</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/patient</span>
+                        </a>
+                    </span>
+                    <div class="opblock-summary-description">Read patient list</div>
+                </div>
+            </div>
+            <div class="opblock opblock-put">
+                <div class="opblock-summary opblock-summary-put">
+                    <span class="opblock-summary-method">PUT</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/patient/{patientId}</span>
+                        </a>
+                    </span>
+                    <div class="opblock-summary-description">Update patient</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
