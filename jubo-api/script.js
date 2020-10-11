@@ -1,6 +1,5 @@
 var myHeaders = new Headers();
 myHeaders.append("apikey", "RRVMRC3-ZKGMGYA-NK59NSC-EE1A1AJ");
-myHeaders.append("Cookie", "__cfduid=da4350f70f39f87b464a4eb12751121ff1600653595");
 
 var requestOptions = {
   method: 'GET',
