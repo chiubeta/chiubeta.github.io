@@ -5,114 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Jubo VitalLink API</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='style.css' rel='stylesheet' type='text/css' />
     </head>
-    <style>
-        body {
-            display: flex;
-        }
-
-        .api-list-container, .api-data-container {
-            margin: 16px;
-        }
-
-        .card {
-            border: solid 2px #0097a7;
-            /* background-color: #0097a7; */
-            margin: 0 0 16px;
-            padding: 16px;
-            border-radius: 4px;
-            width: 100%;
-        }
-
-        .card > div {
-            line-height: 28px;
-        }
-
-        .opblock.opblock-post {
-            border-color: #49cc90;
-            background: rgba(73,204,144,.1);
-        }
-
-        .opblock.opblock-get {
-            border-color: #61affe;
-            background: rgba(97,175,254,.1);
-        }
-        
-        .opblock.opblock-put {
-            border-color: #fca130;
-            background: rgba(252,161,48,.1);
-        }
-
-        .opblock {
-            margin: 0 0 16px;
-            border: 1px solid #000;
-            border-radius: 4px;
-            box-shadow: 0 0 3px rgba(0,0,0,.19);
-        }
-
-        .opblock .opblock-description {
-            padding: 5px;
-        }
-
-        .opblock.opblock-post .opblock-summary {
-            border-color: #49cc90;
-        }
-        
-        .opblock.opblock-get .opblock-summary {
-            border-color: #61affe;
-        }
-        
-        .opblock.opblock-put .opblock-summary {
-            border-color: #fca130;
-        }
-
-        .opblock .opblock-summary {
-            display: flex;
-            align-items: center;
-            padding: 5px;
-            cursor: pointer;
-        }
-
-        .opblock.opblock-post .opblock-summary-method {
-            background: #49cc90;
-        }
-
-        .opblock.opblock-get .opblock-summary-method {
-            background: #61affe;
-        }
-
-        .opblock.opblock-put .opblock-summary-method {
-            background: #fca130;
-        }
-
-        .opblock .opblock-summary-method {
-            font-size: 14px;
-            font-weight: 700;
-            min-width: 80px;
-            padding: 6px 15px;
-            text-align: center;
-            border-radius: 3px;
-            background: #000;
-            text-shadow: 0 1px 0 rgba(0,0,0,.1);
-            font-family: sans-serif;
-            color: #fff;
-        }
-
-        .opblock .opblock-summary-path {
-            flex-shrink: 0;
-        }
-
-        .opblock .opblock-summary-operation-id, .opblock .opblock-summary-path, .opblock .opblock-summary-path__deprecated {
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            word-break: break-word;
-            padding: 0 10px;
-            font-family: monospace;
-            font-weight: 600;
-            color: #3b4151;
-        }
-    </style>
     <body>
         <div class="api-list-container">
 
@@ -126,8 +20,8 @@
                             <span>/api/vitalLink/vitalsign</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">列出機構內所有住民一個月內最新一筆生命徵象紀錄</span>
                 </div>
-                <span class="opblock-description">列出機構內所有住民一個月內最新一筆生命徵象紀錄</span>
             </div>
 
             <h3>Patient</h3>
@@ -140,8 +34,8 @@
                             <span>/api/vitalLink/patient</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">列出機構內所有住民資料</span>
                 </div>
-                <span class="opblock-description">列出機構內所有住民資料</span>
             </div>
             <div class="opblock opblock-get">
                 <div class="opblock-summary opblock-summary-get">
@@ -151,8 +45,8 @@
                             <span>/api/vitalLink/patient/{patientId}</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">取得指定住民資料</span>
                 </div>
-                <span class="opblock-description">取得指定住民資料</span>
             </div>
             <div class="opblock opblock-post">
                 <div class="opblock-summary opblock-summary-post">
@@ -162,8 +56,8 @@
                             <span>/api/vitalLink/patient/{patientId}</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">新建住民資料</span>
                 </div>
-                <span class="opblock-description">新建住民資料</span>
             </div>
             <div class="opblock opblock-put">
                 <div class="opblock-summary opblock-summary-put">
@@ -173,8 +67,8 @@
                             <span>/api/vitalLink/patient/{patientId}</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">更新指定住民資料</span>
                 </div>
-                <span class="opblock-description">更新指定住民資料</span>
             </div>
 
             <h3>User</h3>
@@ -187,8 +81,8 @@
                             <span>/api/vitalLink/user</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">列出機構內所有使用者資料</span>
                 </div>
-                <span class="opblock-description">列出機構內所有使用者資料</span>
             </div>
             <div class="opblock opblock-get">
                 <div class="opblock-summary opblock-summary-get">
@@ -198,8 +92,8 @@
                             <span>/api/vitalLink/user/{userId}</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">取得指定使用者資料</span>
                 </div>
-                <span class="opblock-description">取得指定使用者資料</span>
             </div>
             <div class="opblock opblock-post">
                 <div class="opblock-summary opblock-summary-post">
@@ -209,8 +103,8 @@
                             <span>/api/vitalLink/user/{userId}</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">新建使用者資料</span>
                 </div>
-                <span class="opblock-description">新建使用者資料</span>
             </div>
             <div class="opblock opblock-put">
                 <div class="opblock-summary opblock-summary-put">
@@ -220,8 +114,8 @@
                             <span>/api/vitalLink/user/{userId}</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">更新指定使用者資料</span>
                 </div>
-                <span class="opblock-description">更新指定使用者資料</span>
             </div>
 
             <h3>Organization</h3>
@@ -234,8 +128,8 @@
                             <span>/api/vitalLink/organization/branch</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">取得機構的分區列表</span>
                 </div>
-                <span class="opblock-description">取得機構的分區列表</span>
             </div>
             <div class="opblock opblock-put">
                 <div class="opblock-summary opblock-summary-put">
@@ -245,10 +139,11 @@
                             <span>/api/vitalLink/organization/branch</span>
                         </a>
                     </span>
+                    <span class="opblock-summary-description">更新機構的分區列表</span>
                 </div>
-                <span class="opblock-description">更新機構的分區列表</span>
             </div>
         </div>
+
         <div class="api-data-container">
 
         </div>

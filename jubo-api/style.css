@@ -1,0 +1,121 @@
+body {
+    display: flex;
+}
+
+.api-list-container, .api-data-container {
+    margin: 16px;
+}
+
+.card {
+    border: solid 1px #0097a7;
+    /* background-color: #0097a7; */
+    margin: 0 0 16px;
+    padding: 16px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.card > div {
+    line-height: 28px;
+}
+
+.opblock.opblock-deprecated {
+    opacity: 0.6;
+    border-color: #ebebeb;
+    background: hsla(0,0%,92.2%,.1);
+}
+
+.opblock.opblock-post {
+    border-color: #49cc90;
+    background: rgba(73,204,144,.1);
+}
+
+.opblock.opblock-get {
+    border-color: #61affe;
+    background: rgba(97,175,254,.1);
+}
+
+.opblock.opblock-put {
+    border-color: #fca130;
+    background: rgba(252,161,48,.1);
+}
+
+.opblock.opblock-delete {
+    border-color: #f93e3e;
+    background: rgba(249,62,62,.1);
+}
+
+.opblock {
+    margin: 0 0 16px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0,0,0,.19);
+}
+
+.opblock.opblock-post .opblock-summary {
+    border-color: #49cc90;
+}
+
+.opblock.opblock-get .opblock-summary {
+    border-color: #61affe;
+}
+
+.opblock.opblock-put .opblock-summary {
+    border-color: #fca130;
+}
+
+.opblock.opblock-delete .opblock-summary {
+    border-color: #f93e3e;
+}
+
+.opblock .opblock-summary {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.opblock.opblock-post .opblock-summary-method {
+    background: #49cc90;
+}
+
+.opblock.opblock-get .opblock-summary-method {
+    background: #61affe;
+}
+
+.opblock.opblock-put .opblock-summary-method {
+    background: #fca130;
+}
+
+.opblock .opblock-summary-method {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 80px;
+    padding: 6px 15px;
+    text-align: center;
+    border-radius: 3px;
+    background: #000;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.opblock .opblock-summary-path {
+    flex-shrink: 0;
+}
+
+.opblock .opblock-summary-operation-id, .opblock .opblock-summary-path, .opblock .opblock-summary-path__deprecated {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+    padding: 0 10px;
+    font-family: monospace;
+    font-weight: 600;
+    color: #3b4151;
+}
+
+a.nostyle, a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
