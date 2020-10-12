@@ -7,8 +7,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <style>
-        .api-list-container {
-            width: 50%;
+        body {
+            display: flex;
+        }
+
+        .api-list-container, .api-data-container {
+            margin: 16px;
+        }
+
+        .card {
+            border: solid 2px #0097a7;
+            /* background-color: #0097a7; */
+            margin: 0 0 16px;
+            padding: 16px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .card > div {
+            line-height: 28px;
         }
 
         .opblock.opblock-post {
@@ -27,10 +44,14 @@
         }
 
         .opblock {
-            margin: 0 0 15px;
+            margin: 0 0 16px;
             border: 1px solid #000;
             border-radius: 4px;
             box-shadow: 0 0 3px rgba(0,0,0,.19);
+        }
+
+        .opblock .opblock-description {
+            padding: 5px;
         }
 
         .opblock.opblock-post .opblock-summary {
@@ -94,6 +115,9 @@
     </style>
     <body>
         <div class="api-list-container">
+
+            <h3>Vital Sign</h3>
+
             <div class="opblock opblock-get">
                 <div class="opblock-summary opblock-summary-get">
                     <span class="opblock-summary-method">GET</span>
@@ -102,19 +126,44 @@
                             <span>/api/vitalLink/vitalsign</span>
                         </a>
                     </span>
-                    <div class="opblock-summary-description">Read vitalsign list</div>
                 </div>
+                <span class="opblock-description">列出機構內所有住民一個月內最新一筆生命徵象紀錄</span>
+            </div>
+
+            <h3>Patient</h3>
+
+            <div class="opblock opblock-get">
+                <div class="opblock-summary opblock-summary-get">
+                    <span class="opblock-summary-method">GET</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/patient</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">列出機構內所有住民資料</span>
+            </div>
+            <div class="opblock opblock-get">
+                <div class="opblock-summary opblock-summary-get">
+                    <span class="opblock-summary-method">GET</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/patient/{patientId}</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">取得指定住民資料</span>
             </div>
             <div class="opblock opblock-post">
                 <div class="opblock-summary opblock-summary-post">
                     <span class="opblock-summary-method">POST</span>
                     <span class="opblock-summary-path">
                         <a class="nostyle" href="#">
-                            <span>/api/vitalLink/patient</span>
+                            <span>/api/vitalLink/patient/{patientId}</span>
                         </a>
                     </span>
-                    <div class="opblock-summary-description">Read patient list</div>
                 </div>
+                <span class="opblock-description">新建住民資料</span>
             </div>
             <div class="opblock opblock-put">
                 <div class="opblock-summary opblock-summary-put">
@@ -124,10 +173,85 @@
                             <span>/api/vitalLink/patient/{patientId}</span>
                         </a>
                     </span>
-                    <div class="opblock-summary-description">Update patient</div>
                 </div>
+                <span class="opblock-description">更新指定住民資料</span>
+            </div>
+
+            <h3>User</h3>
+
+            <div class="opblock opblock-get">
+                <div class="opblock-summary opblock-summary-get">
+                    <span class="opblock-summary-method">GET</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/user</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">列出機構內所有使用者資料</span>
+            </div>
+            <div class="opblock opblock-get">
+                <div class="opblock-summary opblock-summary-get">
+                    <span class="opblock-summary-method">GET</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/user/{userId}</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">取得指定使用者資料</span>
+            </div>
+            <div class="opblock opblock-post">
+                <div class="opblock-summary opblock-summary-post">
+                    <span class="opblock-summary-method">POST</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/user/{userId}</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">新建使用者資料</span>
+            </div>
+            <div class="opblock opblock-put">
+                <div class="opblock-summary opblock-summary-put">
+                    <span class="opblock-summary-method">PUT</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/user/{userId}</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">更新指定使用者資料</span>
+            </div>
+
+            <h3>Organization</h3>
+
+            <div class="opblock opblock-get">
+                <div class="opblock-summary opblock-summary-get">
+                    <span class="opblock-summary-method">GET</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/organization/branch</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">取得機構的分區列表</span>
+            </div>
+            <div class="opblock opblock-put">
+                <div class="opblock-summary opblock-summary-put">
+                    <span class="opblock-summary-method">PUT</span>
+                    <span class="opblock-summary-path">
+                        <a class="nostyle" href="#">
+                            <span>/api/vitalLink/organization/branch</span>
+                        </a>
+                    </span>
+                </div>
+                <span class="opblock-description">更新機構的分區列表</span>
             </div>
         </div>
+        <div class="api-data-container">
+
+        </div>
     </body>
-    <script src="script.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </html>
